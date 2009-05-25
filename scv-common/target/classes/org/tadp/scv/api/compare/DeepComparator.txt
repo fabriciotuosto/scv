@@ -1,0 +1,37 @@
+# DeepComparator
+/**
+* Esta clase hace una comparacion profunda (recursiva) de un directorio
+*/
+
+TipoOperacion tipoOp //Aca guardo la estrategia que voy a usar 
+Directory baseCopy //el directorio inicial
+Directory workingCopy // el directorio al que quiero llegar
+
+Directory comparar(Directory baseCopy, Directory workingCopy)
+{ 
+	//creo un nuevo DirectoryImpl dir con una Revision rev
+	//creo un nuevo directoryComparator y comparo baseCopy y workingCopy, agrego las diferenciasa rev
+	
+	//itero por cada directoryComparator.getFilesComunes
+		//A futuro: aca podria venir la estrategia para decidir que hacer con respecto al numero de version
+
+		//Creo un FileImp con una sola revision revFile
+		//Creo un fileComparator y comparo, agrego las diferencias a revFile
+		//Agrego el FileImp que cree a dir
+	
+	//itero por cada directoryComparator.getFilesComunes
+		//A futuro: aca podria venir la estrategia para decidir que hacer con respecto al numero de version
+
+		//creo un DeepComparator y le paso las 2 copias del directorio, le seteo tipoOp
+		//lo que me devuelve se lo agrego a dir
+
+}
+
+
+/*NOTAS:
+TipoOperacion es una clase abstracta
+Generaliza a TipoOperacionCommit y TipoOperacionUpdate
+
+Hay que agregar a direcotryComparator 2 metodos:
+getDirectorysComunes y getFilesComunes que me devuelvan una clase que contenga las 2 copias
+*/
