@@ -1,71 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.tadp.scv</groupId>
-  <artifactId>scv</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0</version>
-  <name>Sistema de Control de Versiones</name>
-  <url>http://maven.apache.org</url>
- <build>
-	<plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<inherited>true</inherited>
-			<configuration>
-				<source>1.5</source>
-				<target>1.5</target>
-				<debug>true</debug>
-				<showDeprecation>true</showDeprecation>
-				<showWarnings>true</showWarnings>
-				<optimize>false</optimize>
-			</configuration>
-		</plugin>
-               <plugin>
-                      <artifactId>maven-release-plugin</artifactId>
-                      <configuration>
-                                     <tagBase>http://elendir.dyndns.org/svn/repository/facultad/tadp/07/scv/tag</tagBase>
-                      </configuration>
-              </plugin>
-	</plugins>
-  </build>
-  <scm>
-          <connection>scm:svn:http://elendir.dyndns.org/svn/repository/facultad/tadp/07/scv/trunk/scv</connection>
-          <developerConnection>scm:svn:http://elendir.dyndns.org/svn/repository/facultad/tadp/07/scv/trunk/scv</developerConnection>
-   </scm>
-  <ciManagement>
- 	 <system>continuum</system> 
-	  <url>http://elendir.dyndns.org:9090/continuum/servlet/continuum</url> 
-	 <notifiers>
-		 <notifier>
-			 <configuration>
-   			       <address>fabricio.tuosto@gmail.com</address> 
-			 </configuration>
-		  </notifier>
-	  </notifiers>
-  </ciManagement>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.tadp.scv</groupId>
+    <artifactId>scv</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>Sistema de Control de Versiones</name>
+    <url>http://maven.apache.org</url>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <inherited>true</inherited>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <optimize>true</optimize>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-  <repositories>
- 	 <repository>
-		  <id>olga-private</id> 
-		  <name>desavu private</name> 
-		  <url>http://elendir.dyndns.org:8181/px-webapp/repository/private</url> 
-	  </repository>
-	  <repository>
-		  <id>olga-public</id> 
-		  <name>Maven Repository</name> 
-                  <url>http://elendir.dyndns.org:8181/px-webapp/repository/public</url> 
-	  </repository>
-	  <repository>
-		  <id>olga-ext</id> 
-		  <name>Maven Repository</name> 
-		  <url>http://elendir.dyndns.org:8181/px-webapp/repository/ext</url> 
-   </repository>
-  </repositories>
-  <modules>
-	    <module>scv-cliente</module>
-	    <module>scv-servidor</module>
-	    <module>scv-common</module>
-  </modules>
+    <modules>
+        <module>scv-cliente</module>
+        <module>scv-servidor</module>
+        <module>scv-common</module>
+        <module>scv-web</module>
+    </modules>
 </project>

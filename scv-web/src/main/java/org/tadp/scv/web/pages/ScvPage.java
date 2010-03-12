@@ -3,7 +3,7 @@ package org.tadp.scv.web.pages;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.CreateMockServer;
+import org.tadp.scv.web.application.test.CreateMockServer;
 import org.tadp.scv.api.filesystem.server.DirectoryVersionable;
 import org.tadp.scv.api.server.SCVServer;
 import org.tadp.scv.web.pages.components.AjaxListDropDown;
